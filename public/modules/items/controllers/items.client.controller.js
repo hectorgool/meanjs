@@ -89,5 +89,16 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 
 		};
 
+
+		$scope.pushMinus = function(event){
+    		alert(event.target.id);
+		}
+
+
+		$scope.pushPlus = function(event){
+    		alert(event.target.id);
+		}
+
+
 	}	
 ]);

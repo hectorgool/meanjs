@@ -27,3 +27,11 @@ body.ng-cloak
 {
 	display: block;
 }
+
+#minus {
+  cursor: pointer;
+}
+
+#plus {
+  cursor: pointer;
+}
