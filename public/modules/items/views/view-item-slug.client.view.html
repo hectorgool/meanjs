@@ -35,36 +35,35 @@
 						$ <span id="price">33.33</span> <small>MXN</small>
 					</strong>
 				</h3>
+		
+				<p>						
+					<strong>Description:</strong>
+				</p>
 
-				<dl>
+				<p>
+					<span class="lead" data-ng-bind="item.description"></span>
+				</p>
 
-					<dt>
-						<strong>
-							Description
-						</strong>
-					</dt>
+				<p>						
+					<strong>Quantity:</strong>
+				</p>
 
-					<dd>
-						<span class="lead" data-ng-bind="item.description"></span>
-					</dd>
+				<p>
+				    <div class="input-group">
 
-					<dt>
-						<strong>
-							Quantity
-						</strong>
-					</dt>
+				        <span id="minus" class="input-group-addon btn-white">
+				        	<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+				        </span>
 
-					<dd>
-						<select class="form-control input-lg">
-							<option>1</option>
-						  	<option>2</option>
-						  	<option>3</option>
-						  	<option>4</option>
-						  	<option>5</option>
-						</select>
-					</dd>
+				        <input value="1" class="form-control input-lg" type="text" placeholder="items quantity">
 
-				</dl>
+				        <span id="plus" class="input-group-addon btn-white">
+				        	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+				        </span>
+				        
+				    </div>
+				</p>
+
 
 				<a href="#" id="morepics" type="button" class="btn btn-default btn-lg btn-block">
 					<span class="glyphicon glyphicon-picture" aria-hidden="true"></span> 
@@ -95,7 +94,7 @@
 				<a class="btn btn-social-icon btn-lg btn-facebook">
 					<i class="fa fa-facebook"></i>
 					</a>
-				<a class="btn btn-social-icon btn-lg btn-google-plus">
+				<a class="btn btn-social-icon btn-lg btn-google">
 					<i class="fa fa-google-plus"></i>
 					</a>
 				<a class="btn btn-social-icon btn-lg btn-tumblr">

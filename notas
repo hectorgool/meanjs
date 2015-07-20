@@ -60,3 +60,6 @@ en: conf/env/all.js
 				'public/lib/angular-slugify/angular-slugify.js'
 			]
 		},
+
+1) npm install
+2) bower install
