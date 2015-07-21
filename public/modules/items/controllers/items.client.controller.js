@@ -90,7 +90,7 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 		};
 
 
-		$scope.cart = { quatity : 1 }
+		$scope.cart = { quatity : 1 };
 
 		//santo: beta
 		$scope.pushMinus = function(){
@@ -100,8 +100,7 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 			}    		
     		console.log('data: ' + JSON.stringify($scope.cart.quatity) );
 
-		}
-
+		};
 
 		//santo: beta
 		$scope.pushPlus = function(){
@@ -109,7 +108,7 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 			$scope.cart.quatity = $scope.cart.quatity + 1;
     		console.log('data: ' + JSON.stringify($scope.cart.quatity) );
 
-		}
+		};
 
 
 	}	
