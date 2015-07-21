@@ -3,20 +3,6 @@
 
 	<!--start:search-->
 	<div ng-include src="'modules/search/views/box-search.client.view.html'"></div>
-	<!--
-	<div id="row">
-		<div class="col-md-12">
-			<p>
-				<div class="input-group">
-					<input class="form-control input-lg" type="text" placeholder="Search item">
-					<span class="input-group-addon btn-white">
-						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-					</span>
-				</div>
-			</p>
-		</div>
-	</div>
-	-->
 	<!--end:search-->
 
 
@@ -32,7 +18,7 @@
 				
 				<h3>
 					<strong>
-						$ <span id="price">33.33</span> <small>MXN</small>
+						$ {{ 33.33 * cart.quatity | number:2 }} <small>MXN</small>
 					</strong>
 				</h3>
 		
@@ -49,19 +35,29 @@
 				</p>
 
 				<p>
-				    <div class="input-group">
 
-				        <span id="minus" class="input-group-addon btn-white" data-ng-click="pushMinus($event)">
-				        	<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-				        </span>
+					<div class="row">
+					  <div class="col-lg-12">
+					    <div class="input-group">
 
-				        <input value="1" class="form-control input-lg" type="text" placeholder="items quantity">
+					      <span class="input-group-btn" data-ng-click="pushMinus()">
+					        <button class="btn btn-default btn-lg" type="button">
+					        	<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+					        </button>
+					      </span>
 
-				        <span id="plus" class="input-group-addon btn-white" data-ng-click="pushPlus($event)">
-				        	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-				        </span>
-				        
-				    </div>
+					      <input ng-model="cart.quatity" type="text" class="form-control input-lg" placeholder="Quantity, ej: 10">
+
+					      <span class="input-group-btn" data-ng-click="pushPlus()">
+					        <button class="btn btn-default btn-lg" type="button">
+					        	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					        </button>
+					      </span>
+
+					    </div>
+					  </div>
+					</div>
+
 				</p>
 
 
@@ -154,22 +150,4 @@
 	</div>	
 
 
-
-
-
-
-
-
-
-
-
-
 </section>
-
-
-
-
-
-
-
-

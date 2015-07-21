@@ -1,81 +1,78 @@
+
+
+<!--start:search-->
+<div ng-include src="'modules/search/views/box-search.client.view.html'"></div>
+<!--end:search-->
+
+
 <section data-ng-controller="ItemsController" data-ng-init="find()">
 
+	<div class="row">
 
-	<!--
-	<div class="page-header">
-		<h1>Items</h1>
+		<div class="col-md-12">
+
+			<div class="col-md-4" ng-repeat="item in items">
+
+				<div class="panel panel-default">
+
+				  	<div class="panel-body">
+
+				  		<a data-ng-href="#!/catalog/{{item.user.username}}/item/{{item.slug}}">
+				  			<img src="modules/core/img/django.jpg" class="img-responsive" alt="Responsive image">
+				  		</a>
+
+				    	<h4>
+				    		<span data-ng-bind="item.name"></span>
+				    	</h4>
+
+				    	<p>
+				    		@ <span data-ng-bind="item.user.displayName"></span>
+				    	</p>
+
+						<a href="" type="button" class="btn btn-link">
+							$0.00 MXN
+						</a>
+
+						<div class="pull-right">
+		      				In Stock
+		    			</div>
+
+						<button id="addToCart" type="button" class="btn btn-default btn-lg btn-block">
+							<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+							Add to cart
+						</button>
+
+				  	</div>
+
+				  	<div class="panel-footer text-right">
+
+						<span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share: 
+
+				  		<a href="#" class="btn btn-social-icon btn-facebook">
+				  			<i class="fa fa-facebook" id="facebook"></i>
+				  		</a>
+				  		<a href="#" class="btn btn-social-icon btn-google">
+				  			<i class="fa fa-google-plus" id="google-plus"></i>
+				  		</a>
+				  		<a href="#" class="btn btn-social-icon btn-pinterest">
+				  			<i class="fa fa-pinterest" id="pinterest"></i></a>
+				  		</a>
+				  		<a href="#" class="btn btn-social-icon btn-twitter">
+				  			<i class="fa fa-twitter" id="twitter"></i></a>
+				  		</a>
+				  	</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
 	</div>
-	-->
-	<!--
+
 	<pre>
 		{{items|json}}
 	</pre>
-	-->
-
-	<div ng-repeat="item in items" ng-if="$index % 3 == 0" class="row">
-
-	    <div class="col-md-4">
-	    	<div class="panel panel-default">
-				<div class="panel-body">
-				<a data-ng-href="#!/catalog/{{items[$index].user.username}}/item/{{items[$index].slug}}">
-					<img src="modules/core/img/django.jpg" class="img-responsive">
-				</a>
-				<small class="list-group-item-text">
-					Posted on
-					<span data-ng-bind="items[$index].created | date:'mediumDate'"></span>
-					by
-					<span data-ng-bind="items[$index].user.displayName"></span>
-				</small>
-
-				<a data-ng-href="#!/item/{{items[$index].slug}}">
-					<h4 class="list-group-item-heading" data-ng-bind="items[$index].name"></h4>
-				</a>
-				<p class="list-group-item-text" data-ng-bind="items[$index].slug"></p>
-				<p class="list-group-item-text" data-ng-bind="items[$index].description"></p>
-				</div>
-			</div>
-	    </div>
-
-	    <div class="col-md-4">
-	    	<div class="panel panel-default">
-				<div class="panel-body">
-				<img src="modules/core/img/django.jpg" class="img-responsive">	    	
-				<small class="list-group-item-text">
-					Posted on
-					<span data-ng-bind="items[$index+1].created | date:'mediumDate'"></span>
-					by
-					<span data-ng-bind="items[$index+1].user.displayName"></span>
-				</small>
-
-				<a data-ng-href="#!/item/{{items[$index+1].slug}}">
-					<h4 class="list-group-item-heading" data-ng-bind="items[$index+1].name"></h4>
-				</a>
-				<p class="list-group-item-text" data-ng-bind="items[$index+1].slug"></p>
-				<p class="list-group-item-text" data-ng-bind="items[$index+1].description"></p>
-				</div>
-			</div>						
-	    </div>
-
-	    <div class="col-md-4">
-	    	<div class="panel panel-default">
-				<div class="panel-body">
-				<img src="modules/core/img/django.jpg" class="img-responsive">
-				<small class="list-group-item-text">
-					Posted on
-					<span data-ng-bind="items[$index+2].created | date:'mediumDate'"></span>
-					by
-					<span data-ng-bind="items[$index+2].user.displayName"></span>
-				</small>
-				<a data-ng-href="#!/item/{{items[$index+2].slug}}">
-					<h4 class="list-group-item-heading" data-ng-bind="items[$index+2].name"></h4>
-				</a>
-				<p class="list-group-item-text" data-ng-bind="items[$index+2].slug"></p>
-				<p class="list-group-item-text" data-ng-bind="items[$index+2].description"></p>
-				</div>
-			</div>						
-	    </div>
-
-	</div>
 
 	<div class="alert alert-warning text-center" data-ng-if="items.$resolved && !items.length">
 		No items yet, why don't you <a href="/#!/items/create">create one</a>?

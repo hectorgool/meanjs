@@ -90,13 +90,25 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 		};
 
 
-		$scope.pushMinus = function(event){
-    		alert(event.target.id);
+		$scope.cart = { quatity : 1 }
+
+		//santo: beta
+		$scope.pushMinus = function(){
+
+			if( $scope.cart.quatity >= 1 ){
+				$scope.cart.quatity = $scope.cart.quatity - 1;
+			}    		
+    		console.log('data: ' + JSON.stringify($scope.cart.quatity) );
+
 		}
 
 
-		$scope.pushPlus = function(event){
-    		alert(event.target.id);
+		//santo: beta
+		$scope.pushPlus = function(){
+
+			$scope.cart.quatity = $scope.cart.quatity + 1;
+    		console.log('data: ' + JSON.stringify($scope.cart.quatity) );
+
 		}
 
 
