@@ -2,7 +2,8 @@
 
 module.exports = {
 	app: {
-		title: 'MEAN.JS',
+		//title: 'MEAN.JS',
+		title: 'SANTIX',
 		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
 		keywords: 'mongodb, express, angularjs, node.js, mongoose, passport'
 	},
