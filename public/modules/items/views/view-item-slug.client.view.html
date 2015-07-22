@@ -61,7 +61,8 @@
 				</p>
 
 
-				<a href="#" id="morepics" type="button" class="btn btn-default btn-lg btn-block">
+				<a href="modules/core/img/django.jpg" id="morepics" type="button" 
+					class="btn btn-default btn-lg btn-block" data-gallery>
 					<span class="glyphicon glyphicon-picture" aria-hidden="true"></span> 
 					More pics
 				</a>
@@ -109,45 +110,73 @@
 			<div class="panel-body">
 
 				<center>
-					<!-- Button trigger modal -->
-					<div id="modal" href="#" data-toggle="modal" data-target="#images">
-						<img src="modules/core/img/django.jpg" class="img-responsive" alt="Responsive images">
+					<div id="links">
+						<a href="modules/core/img/django.jpg" data-gallery>
+							<img src="modules/core/img/django.jpg" class="img-responsive" alt="Responsive images">
+						</a>
 					</div>
 				</center>
-
-				<!-- Modal -->
-				<div class="modal fade" id="images" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  	<div class="modal-dialog modal-lg">
-					    <div class="modal-content">
-
-					      	<div class="modal-header">
-					        	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					        	<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-					      	</div>
-					      	
-					      	<div class="modal-body">
-
-					       		<div class="galleria">
-					       			<img src="" class="img-responsive" alt="Responsive image">
-					       		</div>
-					       		
-					      	</div>
-
-					      	<div class="modal-footer">
-					        	<button type="button" class="btn btn-default" data-dismiss="modal">
-					        		<span data-lift="Loc.i">button.close</span>
-					        	</button>
-					      	</div>
-
-					    </div>
-				  	</div>
-				</div>
-				
 
 			</div>	
 
 		</div>
 	</div>	
+
+
+	<!--Gallery-->
+	<div id="links">
+	    <a href="modules/core/img/django.jpg" title="Banana" data-gallery>
+	        <img src="images/thumbnails/banana.jpg" alt="Banana">
+	    </a>
+	    <a href="modules/core/img/django.jpg" title="Apple" data-gallery>
+	        <img src="images/thumbnails/apple.jpg" alt="Apple">
+	    </a>
+	    <a href="modules/core/img/django.jpg" title="Orange" data-gallery>
+	        <img src="images/thumbnails/orange.jpg" alt="Orange">
+	    </a>
+	</div>
+	<!--Gallery-->
+
+
+	<!--beta-->
+	<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+	<div id="blueimp-gallery" class="blueimp-gallery">
+	    <!-- The container for the modal slides -->
+	    <div class="slides"></div>
+	    <!-- Controls for the borderless lightbox -->
+	    <h3 class="title"></h3>
+	    <a class="prev">‹</a>
+	    <a class="next">›</a>
+	    <a class="close">×</a>
+	    <a class="play-pause"></a>
+	    <ol class="indicator"></ol>
+	    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+	    <div class="modal fade">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+
+	                <div class="modal-header">
+	                    <button type="button" class="close" aria-hidden="true">&times;</button>
+	                    <h4 class="modal-title"></h4>
+	                </div>
+
+	                <div class="modal-body next"></div>
+
+	                <div class="modal-footer">
+	                    <button type="button" class="btn btn-default pull-left prev">
+	                        <i class="glyphicon glyphicon-chevron-left"></i>
+	                        Previous
+	                    </button>
+	                    <button type="button" class="btn btn-default next">
+	                        Next
+	                        <i class="glyphicon glyphicon-chevron-right"></i>
+	                    </button>
+	                </div>
+
+	            </div>
+	        </div>
+	    </div>
+	</div>
 
 
 </section>
