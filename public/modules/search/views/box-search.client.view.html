@@ -1,14 +1,65 @@
-	<!--start:search-->
+<!--start:search-->
+<div ng-controller="ElasticSearchController">
 	<div id="row">
 		<div class="col-md-12">
 			<p>
-				<div class="input-group">
-					<input class="form-control input-lg" type="text" placeholder="Search item">
-					<span class="input-group-addon btn-white">
-						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-					</span>
-				</div>
+
+		        <div class="input-group">
+		          <input id="term" 
+		            class="form-control input-lg" 
+		            ng-keyup="onKeyUpSendTerm()" 
+		            type="text" 
+		            placeholder="Search item" 
+		            autocomplete="off"
+		          >
+
+		          <span class="input-group-addon btn-white">
+		            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 
+		            <span ng-if="jsonResponse.hits.total > 0">( {{ jsonResponse.hits.total }} Resultados )</span>
+		          </span>
+
+		        </div>
+
 			</p>
 		</div>
 	</div>
+
+    <!--
+    <pre> {{ jsonTerm | json }}</pre>
+    <pre> Hits: {{ jsonResponse.hits.total | json }}</pre>
+    -->
+    <!--<pre> Result: {{ jsonResponse.hits.hits | json }}</pre>-->
+        
+    <hr>
+    <div ng-repeat="obj in jsonResponse.hits.hits">
+
+      <div class="row">
+        <div class="col-md-12">
+            
+            <div id="{{obj._id}}" ng-click="coordenadas()">
+              <blockquote>
+                <h4>
+                  Colonia: <a><span ng-bind="obj._source.colonia"></span></a>
+                </h4>                  
+                <h6>
+                  <div ng-bind="obj._source.ciudad"></div>
+                  Delegación: <span ng-bind="obj._source.delegacion"></span><br>
+                  Latitud: <span id="latitud"><span ng-bind="obj._source.location.lat"></span></span><br>
+                  Longitud: <span id="longitud"><span ng-bind="obj._source.location.lon"></span></span><br>                  
+                  cp: <span ng-bind="obj._source.cp"></span><br>
+                  id: <span ng-bind="obj._id"></span>
+                </h6>
+              </blockquote>
+            </div>
+
+        </div>
+      </div>
+      
+
+    </div>
+
+    <!--<pre> {{ jsonResponse |json }}</pre>-->
+
+
+</div>	
 	<!--end:search-->
