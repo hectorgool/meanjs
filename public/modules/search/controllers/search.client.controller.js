@@ -7,6 +7,7 @@
     .controller('ElasticSearchController', [
       '$scope', 'ElasticSearchQuery', function($scope, ElasticSearchQuery) {
 
+        $scope.term = $('#term').val();//beta
 
         $scope.onKeyUpSendTerm = function() {
 

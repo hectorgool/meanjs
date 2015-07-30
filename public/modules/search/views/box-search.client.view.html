@@ -4,32 +4,83 @@
 		<div class="col-md-12">
 			<p>
 
-		        <div class="input-group">
-		          <input id="term" 
-		            class="form-control input-lg" 
-		            ng-keyup="onKeyUpSendTerm()" 
-		            type="text" 
-		            placeholder="Search item" 
-		            autocomplete="off"
-		          >
+        <div class="input-group">
+          <input id="term" 
+                class="form-control input-lg" 
+                ng-model="term"
+                ng-keyup="onKeyUpSendTerm()" 
+                type="text" 
+                placeholder="Search item" 
+                autocomplete="off"
+          >
 
-		          <span class="input-group-addon btn-white">
-		            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 
-		            <span ng-if="jsonResponse.hits.total > 0">( {{ jsonResponse.hits.total }} Resultados )</span>
-		          </span>
+          <span class="input-group-btn">
+            <span ng-if="term.length == 0">
+              <button class="btn btn-default btn-lg" type="button">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>                 
+              </button>
+            </span>
+            <!--
+            <button class="btn btn-default btn-lg" type="button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 
+              <span ng-if="jsonResponse.hits.total > 0">( {{ jsonResponse.hits.total }} )</span>
+            </button>
+            -->
+            <span ng-if="term.length > 0">
+              <button class="btn btn-default btn-lg" type="button">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 
+                <span ng-if="jsonResponse.hits.total > 0">( {{ jsonResponse.hits.total }} )</span>
+              </button>
+            </span>
+          </span>
 
-		        </div>
+        </div>
+
+        <br>
+
+        <div class="table-responsive">
+          <table class="table table-striped">
+
+            <span ng-if="jsonResponse.hits.total">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Colonia</th>
+                  <th>Delegación</th>
+                </tr>
+              </thead>
+            </span>
+  
+            <tbody>
+              <tr ng-repeat="obj in jsonResponse.hits.hits">
+                <td>
+                  <span ng-bind="obj._id"></span>
+                </td>
+                <td>
+                  <span ng-bind="obj._source.colonia"></span>
+                </td>
+                <td>
+                  <span ng-bind="obj._source.delegacion"></span>
+                </td>                          
+              </tr>
+            <tbody>
+
+          </table>
+        </div>
 
 			</p>
 		</div>
 	</div>
+
+     <!--{{ term  }}-->
 
     <!--
     <pre> {{ jsonTerm | json }}</pre>
     <pre> Hits: {{ jsonResponse.hits.total | json }}</pre>
     -->
     <!--<pre> Result: {{ jsonResponse.hits.hits | json }}</pre>-->
-        
+
+    <!--    
     <hr>
     <div ng-repeat="obj in jsonResponse.hits.hits">
 
@@ -55,8 +106,8 @@
         </div>
       </div>
       
-
     </div>
+    -->
 
     <!--<pre> {{ jsonResponse |json }}</pre>-->
 
