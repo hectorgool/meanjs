@@ -7,6 +7,8 @@
     .controller('ElasticSearchController', [
       '$scope', 'ElasticSearchQuery', function($scope, ElasticSearchQuery) {
 
+        //scope.master = {};//beta 
+
         $scope.term = $('#term').val();//beta
 
         $scope.onKeyUpSendTerm = function() {
@@ -35,7 +37,14 @@
 
         };
 
+        /*
+        $scope.reset = function() {//beta
+          $scope.term = angular.copy($scope.master);
+        };
+        */
 
+        //$scope.reset();//beta
+        
       }
     ]);
 

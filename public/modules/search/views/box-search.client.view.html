@@ -10,7 +10,7 @@
                 ng-model="term"
                 ng-keyup="onKeyUpSendTerm()" 
                 type="text" 
-                placeholder="Search item" 
+                placeholder="I'm searching for..." 
                 autocomplete="off"
           >
 
@@ -36,20 +36,56 @@
 
         </div>
 
+        <span ng-if="term.length > 0">
+          <div class="btn-group">
+            <button class="btn btn-default btn-lg btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Order by <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Action</a>
+              </li>
+              <li>
+                <a href="#">Another action</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider" role="separator"></li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+            </ul>
+          </div>
+        </spaN>
+
         <br>
 
+        <div class="media" ng-repeat="obj in jsonResponse.hits.hits">
+          <div class="media-left media-middle">
+            <a href="#">
+              <img class="media-object" src="modules/core/img/redhat-64.png" alt="...">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a>
+                <span ng-bind="obj._source.colonia"></span>
+              </a>
+            </h4>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </div>
+
+        <span ng-if="term.length > 0">
+          <button class="btn btn-default btn-lg btn-block" type="button" aria-haspopup="true" aria-expanded="false">
+            Load more 
+          </button>
+        </span>
+
+        <!--
         <div class="table-responsive">
           <table class="table table-striped">
-
-            <span ng-if="jsonResponse.hits.total">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Colonia</th>
-                  <th>Delegación</th>
-                </tr>
-              </thead>
-            </span>
   
             <tbody>
               <tr ng-repeat="obj in jsonResponse.hits.hits">
@@ -67,6 +103,9 @@
 
           </table>
         </div>
+        -->
+
+        <!--{{ term.length }}-->
 
 			</p>
 		</div>

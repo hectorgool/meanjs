@@ -53,6 +53,7 @@ module.exports = {
 			],
 			js: [
 				'//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',//beta:santo
+				'public/lib/bootstrap/dist/js/bootstrap.min.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js',
 				'public/lib/angular-animate/angular-animate.js',

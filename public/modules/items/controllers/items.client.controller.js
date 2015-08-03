@@ -7,11 +7,27 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 
 		// Create new Item
 		$scope.create = function() {
+
 			// Create new Item object
 			var item = new Items({
-				name:        this.name,
-				description: this.description,
-				slug:        this.slug
+				name:            this.name,
+				sku:             this.sku,//santo
+				description:     this.description,
+				slug:            this.slug,
+				pricing : [ {
+					list:        this.list,
+					retail:      this.retail,
+					savings:     this.savings,
+					pct_savings: this.pct_savings
+				} ],
+				shipping: [ {
+					dimensions : [ {
+						width: this.width,
+						height: this.height,
+						depth: this.depth
+					} ],
+        			weight: this.weight
+    			} ]
 			});
 
 			// Redirect after save
@@ -20,6 +36,7 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 				$location.path('items/' + response._id);
 				// Clear form fields
 				$scope.name = '';
+				$scope.sku  = '';//santo
 				$scope.description = '';
 				$scope.slug = '';
 

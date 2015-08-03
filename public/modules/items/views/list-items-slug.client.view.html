@@ -70,9 +70,16 @@
 
 	</div>
 
+	<button type="button" class="btn btn-default btn-lg btn-block">
+		View More 
+		<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> 		
+	</button>
+
+	<!--
 	<pre>
 		{{items|json}}
 	</pre>
+	-->
 
 	<div class="alert alert-warning text-center" data-ng-if="items.$resolved && !items.length">
 		No items yet, why don't you <a href="/#!/items/create">create one</a>?

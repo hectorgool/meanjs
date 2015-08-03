@@ -8,6 +8,7 @@ var mongoose = require('mongoose'),
 
 
 var dimensionsSchema = new Schema({
+	_id  : false,//santo
 	width: {
 		type: Number,
 		default: 0.0
@@ -24,6 +25,7 @@ var dimensionsSchema = new Schema({
 
 
 var shippingSchema = new Schema({ 
+	_id   : false,//santo
 	weight: {
 		type: Number,
 		default: 0.0
@@ -33,6 +35,7 @@ var shippingSchema = new Schema({
 
 
 var pricingSchema = new Schema({ 
+	_id : false,//santo
 	list: {
 		type: Number,
 		default: 0.0
