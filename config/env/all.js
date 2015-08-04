@@ -62,7 +62,9 @@ module.exports = {
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/angular-slugify/angular-slugify.js',				
 				'public/lib/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
-				'public/lib/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js'
+				'public/lib/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
+				'public/lib/angular-translate/angular-translate.min.js',//santo
+				'public/lib/angular-sanitize/angular-sanitize.min.js'//santo
 			]
 		},
 		css: [

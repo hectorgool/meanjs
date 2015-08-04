@@ -129,3 +129,8 @@ en: conf/env/all.js
 	    </div>
 
 	</div>
+
+
+translate
+
+{{ 'TEST' | translate }}

@@ -2,15 +2,14 @@
 <div ng-controller="ElasticSearchController">
 	<div id="row">
 		<div class="col-md-12">
-			<p>
-
+			<p>        
         <div class="input-group">
           <input id="term" 
                 class="form-control input-lg" 
                 ng-model="term"
                 ng-keyup="onKeyUpSendTerm()" 
                 type="text" 
-                placeholder="I'm searching for..." 
+                placeholder="{{'SEARCH_PLACEHOLDER'|translate}}" 
                 autocomplete="off"
           >
 
