@@ -134,3 +134,10 @@ en: conf/env/all.js
 translate
 
 {{ 'TEST' | translate }}
+
+
+<input type="text"
+placeholder="{{'START.SEARCH'|translate}}" />
+
+
+<span ng-bind=" 'TEST' | translate "></span>

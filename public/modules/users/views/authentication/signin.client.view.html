@@ -26,28 +26,42 @@
 					</a>
 				</div>
 
-				<h3 class="text-center">Or with your account</h3>
+				<h3 class="text-center">
+					<span ng-bind=" 'OR_WITH_YOUR_ACCOUNT' | translate "></span>
+				</h3>
 
 				
 				<form data-ng-submit="signin()" autocomplete="off">
 
 					<div class="form-group">
-						<label for="username">Username</label>
-						<input type="text" id="username" name="username" class="form-control input-lg" data-ng-model="credentials.username" placeholder="Username">
+						<label for="username">
+							<span ng-bind=" 'USERNAME' | translate "></span>
+						</label>
+						<input type="text" id="username" name="username" class="form-control input-lg" data-ng-model="credentials.username" placeholder="{{ 'USERNAME_PLACEHOLDER' | translate }}">
 					</div>
 					<div class="form-group">
-						<label for="password">Password</label>
-						<input type="password" id="password" name="password" class="form-control input-lg" data-ng-model="credentials.password" placeholder="Password">
+						<label for="password">
+							<span ng-bind=" 'PASSWORD' | translate "></span>
+						</label>
+						<input type="password" id="password" name="password" class="form-control input-lg" data-ng-model="credentials.password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}">
 					</div>
 
 					<div class="text-center form-group">
-						<button type="submit" class="btn btn-default btn-lg btn-block">Sign in</button>
+						<button type="submit" class="btn btn-default btn-lg btn-block">
+							<span ng-bind=" 'SIGNIN' | translate "></span>
+						</button>
 
-						<h3 class="text-center">Or</h3>
+						<h3 class="text-center">
+							<span ng-bind=" 'OR' | translate "></span>
+						</h3>
 
-						<a class="btn btn-default btn-lg btn-block" href="/#!/signup">Sign up</a>
+						<a class="btn btn-default btn-lg btn-block" href="/#!/signup">
+							<span ng-bind=" 'SIGNUP' | translate "></span>
+						</a>
 
-						<a class="btn btn-default btn-lg btn-block" href="/#!/password/forgot">Forgot your password?</a>	
+						<a class="btn btn-default btn-lg btn-block" href="/#!/password/forgot">
+							<span ng-bind=" 'FORGOT_PASSWORD' | translate "></span>
+						</a>	
 
 					</div>
 

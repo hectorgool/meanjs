@@ -6,7 +6,9 @@
   			<div class="panel-body">
 
 				<!--<h1 class="text-center">Sign up using your social accounts</h1>-->
-				<h1 class="text-center">Sign up</h1>
+				<h1 class="text-center">
+					<span ng-bind=" 'SIGNUP_TITLE' | translate "></span>
+				</h1>
 				
 				<div class="form-group">
 					<a href="/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
@@ -26,29 +28,41 @@
 					</a>
 				</div>
 
-				<h3 class="text-center">Or create an account</h3>
+				<h3 class="text-center">
+					<span ng-bind=" 'OR_CREATE_AN_ACCOUNT' | translate "></span>
+				</h3>
 
 				<form name="userForm" data-ng-submit="signup()" novalidate autocomplete="off">
 					
 					<div class="form-group">
-						<label for="firstName">First Name</label>
-						<input type="text" required id="firstName" name="firstName" class="form-control input-lg" data-ng-model="credentials.firstName" placeholder="First Name">
+						<label for="firstName">
+							<span ng-bind=" 'FIRST_NAME' | translate "></span>
+						</label>
+						<input type="text" required id="firstName" name="firstName" class="form-control input-lg" data-ng-model="credentials.firstName" placeholder="{{ 'FIRSTNAME_PLACEHOLDER' | translate }}">
 					</div>
 					<div class="form-group">
-						<label for="lastName">Last Name</label>
-						<input type="text" id="lastName" name="lastName" class="form-control input-lg" data-ng-model="credentials.lastName" placeholder="Last Name">
+						<label for="lastName">
+							<span ng-bind=" 'LAST_NAME' | translate "></span>
+						</label>
+						<input type="text" id="lastName" name="lastName" class="form-control input-lg" data-ng-model="credentials.lastName" placeholder="{{ 'LASTNAME_PLACEHOLDER' | translate }}">
 					</div>
 					<div class="form-group">
-						<label for="email">Email</label>
-						<input type="email" id="email" name="email" class="form-control input-lg" data-ng-model="credentials.email" placeholder="Email">
+						<label for="email">
+							<span ng-bind=" 'EMAIL' | translate "></span>
+						</label>
+						<input type="email" id="email" name="email" class="form-control input-lg" data-ng-model="credentials.email" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}">
 					</div>
 					<div class="form-group">
-						<label for="username">Username</label>
-						<input type="text" id="username" name="username" class="form-control input-lg" data-ng-model="credentials.username" placeholder="Username">
+						<label for="username">
+							<span ng-bind=" 'USERNAME' | translate "></span>
+						</label>
+						<input type="text" id="username" name="username" class="form-control input-lg" data-ng-model="credentials.username" placeholder="{{ 'USERNAME_PLACEHOLDER' | translate }}">
 					</div>
 					<div class="form-group">
-						<label for="password">Password</label>
-						<input type="password" id="password" name="password" class="form-control input-lg" data-ng-model="credentials.password" placeholder="Password">
+						<label for="password">
+							<span ng-bind=" 'PASSWORD' | translate "></span>
+						</label>
+						<input type="password" id="password" name="password" class="form-control input-lg" data-ng-model="credentials.password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}">
 					</div>
 
 					<div class="form-group">
@@ -60,18 +74,24 @@
 					<div class="g-recaptcha" data-sitekey="6LdjJAoTAAAAAEEfZ9pIXg4xGudqxJ7EgGx_AhO0"></div>
 
 					<div class="text-center form-group">
-						<button type="submit" class="btn btn-large btn-default btn-lg btn-block">Sign up</button>
+						<button type="submit" class="btn btn-large btn-default btn-lg btn-block">
+							<span ng-bind=" 'SIGNUP' | translate "></span>
+						</button>
 						
-						<h3 class="text-center">Or</h3>
+						<h3 class="text-center">
+							<span ng-bind=" 'OR' | translate "></span>
+						</h3>
 						
-						<a href="/#!/signin" class="btn btn-default btn-lg btn-block show-signup">Sign in</a>
+						<a href="/#!/signin" class="btn btn-default btn-lg btn-block show-signup">
+							<span ng-bind=" 'SIGNIN' | translate "></span>
+						</a>
 					</div>
 					<div data-ng-show="error" class="text-center text-danger">
 						<strong data-ng-bind="error"></strong>
 					</div>
 					
 				</form>
-			</div>	
+			</div>
 		</div>
 	</div>
 
