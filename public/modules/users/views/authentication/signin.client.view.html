@@ -5,26 +5,12 @@
 		<div class="panel panel-default">
   			<div class="panel-body">
 
-				<!--<h1 class="text-center">Sign in using your social accounts</h1>-->
+				
 				<h1 class="text-center">Sign in</h1>
 
-				<div class="form-group">
-					<a href="/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
-						<i class="fa fa-facebook"></i> Facebook
-					</a>
-				</div>
-
-				<div class="form-group">
-					<a href="/auth/google" class="btn btn-lg btn-block btn-social btn-google">
-						<i class="fa fa-google"></i> Google
-					</a>
-				</div>
-
-				<div class="form-group">
-					<a href="/auth/twitter" class="btn btn-lg btn-block btn-social btn-twitter">
-						<i class="fa fa-twitter"></i> Twitter
-					</a>
-				</div>
+				<!--start:social-->
+				<div ng-include src="'modules/users/views/authentication/social.client.view.html'"></div>
+				<!--end:social-->
 
 				<h3 class="text-center">
 					<span ng-bind=" 'OR_WITH_YOUR_ACCOUNT' | translate "></span>

@@ -5,19 +5,12 @@
 	<div ng-include src="'modules/search/views/box-search.client.view.html'"></div>
 	<!--end:search-->
 
-	<!--
-	<div class="page-header">
-		<h1>My Cart</h1>
-	</div>
-	-->
-
-
 	<div class="col-md-6">
 		<div class="panel panel-default">
 			<div class="panel-body">
 
 				<h2>
-					My Cart
+					<span ng-bind=" 'MY_CART' | translate "></span>
 				</h2>
 
 				<hr>
@@ -25,7 +18,7 @@
 				<div class="media">
 					<div class="media-left media-middle">
 				    	<a href="#">
-				      		<img class="media-object" src="" alt="...">
+				      		<img class="media-object" src="modules/core/img/redhat-64.png" alt="...">
 				    	</a>
 				  	</div>
 				  	<div class="media-body">
@@ -36,6 +29,33 @@
 				  	</div>
 				</div>
 
+				<div class="media">
+					<div class="media-left media-middle">
+				    	<a href="#">
+				      		<img class="media-object" src="modules/core/img/redhat-64.png" alt="...">
+				    	</a>
+				  	</div>
+				  	<div class="media-body">
+				    	<h4 class="media-heading">Middle aligned media</h4>
+				    	<p>
+				    		Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+				    	</p>
+				  	</div>
+				</div>
+
+				<div class="media">
+					<div class="media-left media-middle">
+				    	<a href="#">
+				      		<img class="media-object" src="modules/core/img/redhat-64.png" alt="...">
+				    	</a>
+				  	</div>
+				  	<div class="media-body">
+				    	<h4 class="media-heading">Middle aligned media</h4>
+				    	<p>
+				    		Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+				    	</p>
+				  	</div>
+				</div>
 
 			</div>
 		</div>
@@ -47,7 +67,7 @@
 			<div class="panel-body">
 
 				<h2>
-					Summary
+					<span ng-bind=" 'SUMMARY' | translate "></span>
 				</h2>
 
 				<hr>
@@ -55,42 +75,40 @@
 				<dl class="dl-horizontal">
 
 				  	<dt>
-				  		Subtotal
+				  		<span ng-bind=" 'SUBTOTAL' | translate "></span>
 				  	</dt>
 				  	<dd>
 				  		<p class="text-right">$24.59</p>
 				  	</dd>
 
 				  	<dt>
-						Estimated shipping
+						<span ng-bind=" 'ESTIMATED_SHIPPING' | translate "></span>
 				  	</dt>
 				  	<dd>
 				  		<p class="text-right">$6.94</p>
 				  	</dd>
 
 				  	<dt>
-						Total
+						<span ng-bind=" 'TOTAL' | translate "></span>
 				  	</dt>
 				  	<dd>
 				  		<p class="text-right">$31.53</p>
 				  	</dd>
 
 				</dl>
-
 				<!--
 				<button type="button" class="btn btn-default btn-lg btn-block">
 					Update Cart
 				</button>
-				-->
-				
+				-->				
 				<button type="button" class="btn btn-danger btn-lg btn-block">
-					Check Out 
+					<span ng-bind=" 'CHECK_OUT' | translate "></span> 
 					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				</button>
 
 				<button type="button" class="btn btn-default btn-lg btn-block">
 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> 
-					Continue Shopping
+					<span ng-bind=" 'CONTINUE_SHOPPING' | translate "></span> 
 				</button>
 
 			</div>

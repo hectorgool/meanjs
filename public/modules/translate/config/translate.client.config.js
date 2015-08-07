@@ -18,6 +18,7 @@ angular.module('translate', ['pascalprecht.translate'] ).config(function($transl
         ITEM_DESCRIPTION_LABEL: 'Description',
         ITEM_DESCRIPTION_PLACEHOLDER: 'Write your Description',
         ITEM_SEND_BUTTON: 'Send Item',
+        ITEM_EDIT: 'Edit Item',
         //SIGNUP
         SIGNUP_TITLE: 'SignUp',
         OR_CREATE_AN_ACCOUNT : 'Or create an account',
@@ -35,7 +36,21 @@ angular.module('translate', ['pascalprecht.translate'] ).config(function($transl
         OR: 'Or',
         SIGNIN: 'SignIn',
         FORGOT_PASSWORD: 'Forgot your password?',
-        OR_WITH_YOUR_ACCOUNT: 'Or with your account'
+        OR_WITH_YOUR_ACCOUNT: 'Or with your account',
+        MY_CART: 'My Cart',
+        SUMMARY: 'Summary',
+        SUBTOTAL: 'Subtotal',
+        ESTIMATED_SHIPPING: 'Estimated Shipping',
+        TOTAL: 'Total',
+        CHECK_OUT: 'Check Out',
+        CONTINUE_SHOPPING: 'Continue Shopping',
+        //CHANGE_PASSWORD
+        CHANGE_YOUR_PASSWORD: 'Change your Password',
+        CURRENT_PASSWORD: 'Current Password',
+        NEW_PASSWORD: 'New Password',
+        VERIFY_PASSWORD: 'Verify Password',
+        SAVE_PASSWORD: 'Save Password',
+        PASSWORD_CHANGED_SUCCESSFULLY : 'Password Changed Successfully'
 
     });
 

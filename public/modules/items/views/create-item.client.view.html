@@ -23,12 +23,12 @@
 
 					<slug from="name" to="slug"></slug><!--generate slug from name field-->
 
-					<div class="form-group" ng-class="{ 'has-error': itemForm.price.$dirty && itemForm.price.$invalid }">
-						<label class="control-label" for="price">
+					<div class="form-group" ng-class="{ 'has-error': itemForm.list.$dirty && itemForm.list.$invalid }">
+						<label class="control-label" for="list">
 							<span ng-bind=" 'ITEM_PRICE_LABEL' | translate "></span>
 						</label>
 						<div class="controls">
-							<input name="price" type="text" data-ng-model="price" id="price" class="form-control input-lg" 
+							<input name="list" type="text" data-ng-model="list" id="list" class="form-control input-lg" 
 							placeholder="{{ 'ITEM_PRICE_PLACEHOLDER' | translate }}" required>
 						</div>
 					</div>

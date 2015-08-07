@@ -1,40 +1,81 @@
 <section data-ng-controller="ItemsController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1>Edit Item</h1>
+
+	<div class="col-md-6 col-md-offset-3">
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+
+				<h2>
+					<span ng-bind=" 'ITEM_EDIT' | translate "></span>
+				</h2>
+
+				<form name="itemForm" data-ng-submit="update(itemForm.$valid)" novalidate>
+				
+					<div class="form-group" ng-class="{ 'has-error': itemForm.name.$dirty && itemForm.name.$invalid }">
+						<label class="control-label" for="name">
+							<span ng-bind=" 'ITEM_NAME_LABEL' | translate "></span>
+						</label>
+						<div class="controls">
+							<input name="name" type="text" data-ng-model="item.name" id="name" class="form-control input-lg" placeholder="{{ 'ITEM_NAME_PLACEHOLDER' | translate }}" required>
+						</div>
+					</div>
+
+					<slug from="name" to="slug"></slug><!--generate slug from name field-->
+
+					<div class="form-group" ng-class="{ 'has-error': itemForm.list.$dirty && itemForm.list.$invalid }">
+						<label class="control-label" for="list">
+							<span ng-bind=" 'ITEM_PRICE_LABEL' | translate "></span>
+						</label>
+						<div class="controls">
+							<input name="list" type="text" data-ng-model="item.pricing[0].list" id="list" class="form-control input-lg" 
+							placeholder="{{ 'ITEM_PRICE_PLACEHOLDER' | translate }}" required>
+						</div>
+					</div>
+
+					<div class="form-group" ng-class="{ 'has-error': itemForm.sku.$dirty && itemForm.sku.$invalid }">
+						<label class="control-label" for="sku">
+							<span ng-bind=" 'ITEM_SKU_LABEL' | translate "></span>
+						</label>
+						<div class="controls">
+							<input name="sku" type="text" data-ng-model="item.sku" id="sku" class="form-control input-lg" 
+							placeholder="{{ 'ITEM_SKU_PLACEHOLDER' | translate }}" required>
+						</div>
+					</div>
+
+					<div class="form-group" ng-class="{ 'has-error': itemForm.weight.$dirty && itemForm.weight.$invalid }">
+						<label class="control-label" for="weight">
+							<span ng-bind=" 'ITEM_WEIGHT_LABEL' | translate "></span>
+						</label>
+						<div class="controls">
+							<input name="weight" type="text" data-ng-model="item.shipping[0].weight" id="weight" class="form-control input-lg" 
+							placeholder="{{ 'ITEM_WEIGHT_PLACEHOLDER' | translate }}" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="description">
+							<span ng-bind=" 'ITEM_DESCRIPTION_LABEL' | translate "></span>
+						</label>
+						<div class="controls">
+							<textarea name="description" data-ng-model="item.description" id="description" class="form-control input-lg" cols="30" rows="10" placeholder="{{ 'ITEM_DESCRIPTION_PLACEHOLDER' | translate }}"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group">				
+						<button class="btn btn-default btn-lg btn-block" type="submit">
+							<span ng-bind=" 'ITEM_SEND_BUTTON' | translate "></span>
+						</button>
+					</div>
+
+					<div data-ng-show="error" class="text-danger">
+						<strong data-ng-bind="error"></strong>
+					</div>
+
+				</form>
+
+			</div>	
+		</div>
+
 	</div>
-	<div class="col-md-12">
-		<form name="itemForm" class="form-horizontal" data-ng-submit="update(itemForm.$valid)" novalidate>
-			<fieldset>
-				<div class="form-group" ng-class="{ 'has-error' : submitted && itemForm.name.$invalid}">
-					<label class="control-label" for="name">Title</label>
-					<div class="controls">
-						<input name="name" type="text" data-ng-model="item.name" id="name" class="form-control" placeholder="Title" required>
-					</div>
-					<div ng-show="submitted && itemForm.name.$invalid" class="help-block">
-						<p ng-show="itemForm.name.$error.required" class="text-danger">Title is required</p>
-					</div>
-				</div>
 
-				<slug from="item.name" to="item.slug"></slug>
-
-				<div class="form-group" ng-class="{ 'has-error' : submitted && itemForm.description.$invalid}">
-					<label class="control-label" for="description">Content</label>
-					<div class="controls">
-						<textarea name="description" data-ng-model="item.description" id="description" class="form-control" cols="30" rows="10" placeholder="Content" required></textarea>
-					</div>
-					<div ng-show="submitted && itemForm.description.$invalid" class="help-block">
-						<p ng-show="itemForm.description.$error.required" class="text-danger">Content is required</p>
-					</div>
-				</div>
-
-				<div class="form-group">
-					<input type="submit" value="Update" class="btn btn-default">
-				</div>
-
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-			</fieldset>
-		</form>
-	</div>
 </section>
