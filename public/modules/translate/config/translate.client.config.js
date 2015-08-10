@@ -50,7 +50,10 @@ angular.module('translate', ['pascalprecht.translate'] ).config(function($transl
         NEW_PASSWORD: 'New Password',
         VERIFY_PASSWORD: 'Verify Password',
         SAVE_PASSWORD: 'Save Password',
-        PASSWORD_CHANGED_SUCCESSFULLY : 'Password Changed Successfully'
+        PASSWORD_CHANGED_SUCCESSFULLY: 'Password Changed Successfully',
+        EDIT_YOUR_PROFILE: 'Edit Your Profile',
+        SAVE_PROFILE: 'Save Profile',
+        PROFILE_SAVED_SUCCESSFULLY: 'Profile Saved Successfully'
 
     });
 
