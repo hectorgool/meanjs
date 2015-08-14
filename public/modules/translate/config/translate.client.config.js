@@ -53,7 +53,9 @@ angular.module('translate', ['pascalprecht.translate'] ).config(function($transl
         PASSWORD_CHANGED_SUCCESSFULLY: 'Password Changed Successfully',
         EDIT_YOUR_PROFILE: 'Edit Your Profile',
         SAVE_PROFILE: 'Save Profile',
-        PROFILE_SAVED_SUCCESSFULLY: 'Profile Saved Successfully'
+        PROFILE_SAVED_SUCCESSFULLY: 'Profile Saved Successfully',
+        ITEM_IMAGES_LABEL: 'Images',
+        ITEM_IMAGES_PLACEHOLDER: 'pic1.png'
 
     });
 

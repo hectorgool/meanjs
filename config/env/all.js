@@ -48,8 +48,9 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 				'public/lib/bootstrap-social/bootstrap-social.css',
 				'public/lib/font-awesome/css/font-awesome.css',
-				'public/lib/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
-				'public/lib/blueimp-gallery/css/blueimp-gallery.css'
+				//'public/lib/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
+				//'public/lib/blueimp-gallery/css/blueimp-gallery.css'
+				'public/lib/blueimp-gallery/css/blueimp-gallery.min.css'
 			],
 			js: [
 				'//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',//beta:santo
@@ -62,9 +63,10 @@ module.exports = {
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/angular-slugify/angular-slugify.js',				
 				'public/lib/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
-				'public/lib/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
+				//'public/lib/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
 				'public/lib/angular-translate/angular-translate.min.js',//santo
-				'public/lib/angular-sanitize/angular-sanitize.min.js'//santo
+				'public/lib/angular-sanitize/angular-sanitize.min.js',//santo
+				'public/lib/angular-masonry/angular-masonry.js'//santo
 			]
 		},
 		css: [

@@ -7,6 +7,15 @@
 
 <section data-ng-controller="ItemsController" data-ng-init="find()">
 
+	<!--
+	<div masonry>
+    	<div class="masonry-brick" ng-repeat="item in items">
+        	<img ng-src="modules/core/img/{{item.images[0].images}}" alt="A masonry brick">
+    	</div>
+	</div>
+	<hr>
+	-->
+
 	<div class="row">
 
 		<div class="col-md-12">
@@ -18,7 +27,7 @@
 				  	<div class="panel-body">
 
 				  		<a data-ng-href="#!/catalog/{{item.user.username}}/item/{{item.slug}}">
-				  			<img src="modules/core/img/django.jpg" class="img-responsive" alt="Responsive image">
+				  			<img ng-src="modules/core/img/{{item.images[0].images}}" class="img-responsive center-block" alt="Responsive image">
 				  		</a>
 
 				    	<h4>
@@ -75,11 +84,7 @@
 		<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> 		
 	</button>
 
-	<!--
-	<pre>
-		{{items|json}}
-	</pre>
-	-->
+	<!--<pre>{{items|json}}</pre>-->
 
 	<div class="alert alert-warning text-center" data-ng-if="items.$resolved && !items.length">
 		No items yet, why don't you <a href="/#!/items/create">create one</a>?

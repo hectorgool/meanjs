@@ -27,6 +27,9 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 						depth: this.depth
 					} ],
         			weight: this.weight
+    			} ],
+    			images: [ {
+    				images: this.images
     			} ]
 			});
 

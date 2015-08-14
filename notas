@@ -91,3 +91,49 @@ bower angular#>= 1.0.2                                resolve git://github.com/a
 bower angular#>= 1.0.2                               download https://github.com/angular/bower-angular/archive/v1.4.3.tar.gz
 bower angular-slugify#~1.0.0                          extract archive.tar.gz
 bower angular-slugify#~1.0.0                     invalid-meta angular-slugify is missing "ignore" entry in bower.json
+
+
+bower install --save angular-masonry
+
+
+doc =
+{
+	"user" : ObjectId("5592f71033efb954755a0017"),
+	"images" : [
+		{
+			"images" : "1.jpeg"
+		}
+	],
+	"pricing" : [
+		{
+			"pct_savings" : 0,
+			"savings" : 0,
+			"retail" : 0,
+			"list" : 44
+		}
+	],
+	"shipping" : [
+		{
+			"dimensions" : [
+				{
+					"depth" : 0,
+					"height" : 0,
+					"width" : 0
+				}
+			],
+			"weight" : 55
+		}
+	],
+	"created" : ISODate("2015-08-12T14:30:28.584Z"),
+	"description" : "asdfasdf",
+	"slug" : "erwer-5424",
+	"sku" : "23",
+	"name" : "erwer 5424",
+	"__v" : 0
+}
+
+
+Add wu.masonry to you app modules.
+archivo: public/config.js
+
+MongoDB for Node.js Developers

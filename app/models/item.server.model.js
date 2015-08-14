@@ -54,6 +54,16 @@ var pricingSchema = new Schema({
 	}
 });
 
+//beta
+var imageSchema = new Schema({ 
+	_id : false,//santo
+	images: {
+		type: String,
+		default: '',
+		trim: true
+	}
+});
+
 
 /**
  * Item Schema
@@ -88,7 +98,8 @@ var ItemSchema = new Schema({
 		default: Date.now
 	},
 	shipping: [shippingSchema],
-	pricing: [pricingSchema]
+	pricing: [pricingSchema],
+	images: [imageSchema]//beta
 });
 
 

@@ -53,6 +53,16 @@
 						</div>
 					</div>
 
+					<div class="form-group" ng-class="{ 'has-error': itemForm.images.$dirty && itemForm.images.$invalid }">
+						<label class="control-label" for="images">
+							<span ng-bind=" 'ITEM_IMAGES_LABEL' | translate "></span>
+						</label>
+						<div class="controls">
+							<input name="weight" type="text" data-ng-model="images" id="images" class="form-control input-lg" 
+							placeholder="{{ 'ITEM_IMAGES_PLACEHOLDER' | translate }}" required>
+						</div>
+					</div>
+
 					<div class="form-group">
 						<label class="control-label" for="description">
 							<span ng-bind=" 'ITEM_DESCRIPTION_LABEL' | translate "></span>

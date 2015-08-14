@@ -67,9 +67,32 @@
 					More pics
 				</a>
 
-				<button id="askAQuestion" type="button" class="btn btn-default btn-lg btn-block">
+				<button type="button" class="btn btn-default btn-lg btn-block" 
+					data-target="#askAQuestion"
+					data-toggle="modal"
+				>
 					<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ask a question
 				</button>
+
+				<!-- start:Modal -->
+				<div class="modal fade" id="askAQuestion" tabindex="-1" role="dialog" aria-labelledby="askAQuestion">
+				  	<div class="modal-dialog" role="document">
+				    	<div class="modal-content">
+
+			      			<div class="modal-header">
+			        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        				<span aria-hidden="true">&times;</span>
+			        			</button>
+			      			</div>
+
+					      	<div class="modal-body">
+					        	
+					      	</div>
+					      	
+				    	</div>
+				  	</div>
+				</div>
+				<!-- end:Modal -->
 
 				<button id="addToCart" type="button" class="btn btn-default btn-lg btn-block">
 					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to cart
@@ -109,13 +132,21 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 
-				<center>
-					<div id="links">
-						<a href="modules/core/img/django.jpg" data-gallery>
-							<img src="modules/core/img/django.jpg" class="img-responsive" alt="Responsive images">
-						</a>
-					</div>
-				</center>
+				<div id="links">
+					<a href="modules/core/img/django.jpg" data-gallery>
+						<img src="modules/core/img/{{item.images[0].images}}" class="img-responsive center-block" alt="Responsive images">
+					</a>
+				</div>
+				
+				<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+				    <div class="slides"></div>
+				    <h3 class="title"></h3>
+				    <a class="prev">‹</a>
+				    <a class="next">›</a>
+				    <a class="close">×</a>
+				    <!--<a class="play-pause"></a>-->
+				    <ol class="indicator"></ol>
+				</div>				
 
 			</div>	
 
@@ -134,7 +165,7 @@
 	    <a href="modules/core/img/django.jpg" title="Orange" data-gallery>
 	        <img src="images/thumbnails/orange.jpg" alt="Orange">
 	    </a>
-	</div>
+	</div>	
 	<!--Gallery-->
 
 
@@ -177,6 +208,5 @@
 	        </div>
 	    </div>
 	</div>
-
 
 </section>
