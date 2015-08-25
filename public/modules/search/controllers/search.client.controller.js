@@ -7,18 +7,16 @@
     .controller('ElasticSearchController', [
       '$scope', 'ElasticSearchQuery', function($scope, ElasticSearchQuery) {
 
-        //scope.master = {};//beta 
-
-        $scope.term = $('#term').val();//beta
+        $scope.term = '';//beta
 
         $scope.onKeyUpSendTerm = function() {
 
           $scope.jsonTerm = {          
-            'size': 10,
+            'size': 20,
             'query': {
               'match': {
                 '_all': {
-                  'query': $('#term').val(),
+                  'query': $scope.term,//beta
                   'operator': 'and'
                 }
               }
@@ -31,7 +29,7 @@
           ElasticSearchQuery.query({}, $scope.jsonTerm, (function(response) {
             console.log('Success:' + JSON.stringify(response));
             $scope.jsonResponse = response;
-          }), function(errorResponse) {
+          }()), function(errorResponse) {//beta
             console.log('Error:' + JSON.stringify(errorResponse));
           });
 
